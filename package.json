@@ -1,12 +1,12 @@
 {
   "name": "react-native-balloon-slider",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Slider with a floating balloon animation",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
   "types": "lib/typescript/src/index.d.ts",
   "react-native": "src/index.ts",
-  "source": "src/index",
+  "source": "src/index.ts",
   "files": [
     "src",
     "lib"

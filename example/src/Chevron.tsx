@@ -41,8 +41,6 @@ const Chevron = ({ pointsTo = "left" }: ChevronProps) => {
   )
 }
 
-export default Chevron
-
 const styles = StyleSheet.create({
   container: {
     height: 30,
@@ -65,3 +63,5 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
 })
+
+export default Chevron

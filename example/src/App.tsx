@@ -1,38 +1,28 @@
 import React from "react"
 import { StyleSheet, Text, View } from "react-native"
-import { SafeAreaView } from "react-native-safe-area-context"
 import Chevron from "./Chevron"
 import NextBtn from "./NextBtn"
-import BalloonSlider from "../../src/balloon-slider/BalloonSlider"
+import BalloonSlider from "react-native-balloon-slider"
 
 export default function App() {
   return (
-    <SafeAreaView
-      style={{ flex: 1, paddingHorizontal: 24, backgroundColor: "#fff" }}>
-      <View style={styles.space10} />
-      <Chevron />
+    <View style={styles.main}>
+      <View style={styles.chevron}>
+        <Chevron />
+      </View>
       <Text style={styles.header}>Choose balloon quantity</Text>
-      <View style={styles.space80} />
       <View style={styles.slider}>
         <BalloonSlider min={0} max={100} />
       </View>
-      <SafeAreaView style={styles.btn}>
+      <View style={styles.btn}>
         <NextBtn />
-      </SafeAreaView>
-    </SafeAreaView>
+      </View>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
-  slider: {
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  btn: {
-    position: "absolute",
-    bottom: 30,
-    right: 20,
-  },
+  main: { flex: 1, padding: 44, backgroundColor: "#fff" },
   header: {
     marginTop: 50,
     fontSize: 50,
@@ -40,10 +30,17 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     maxWidth: 200,
   },
-  space10: {
+  chevron: {
     marginVertical: 10,
   },
-  space80: {
-    marginVertical: 80,
+  slider: {
+    marginTop: 100,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  btn: {
+    position: "absolute",
+    bottom: 50,
+    right: 25,
   },
 })
