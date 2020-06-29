@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
       "react-native-balloon-slider": ["./src/index"]
@@ -13,15 +14,19 @@
     "lib": ["esnext"],
     "module": "esnext",
     "moduleResolution": "node",
+    "noImplicitAny": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
     "noImplicitUseStrict": false,
     "noStrictGenericChecks": false,
     "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "incremental": false,
     "noUnusedParameters": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
+    "experimentalDecorators": true,
     "target": "esnext"
   }
 }
