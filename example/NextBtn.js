@@ -12,13 +12,15 @@ const NextBtn = () => (
       flexDirection: "row",
       alignItems: "center",
       justifyContent: "space-around",
-    }}>
+    }}
+  >
     <Text
       style={{
         fontWeight: "bold",
         fontSize: 18,
         letterSpacing: 0.4,
-      }}>
+      }}
+    >
       Next
     </Text>
     <Chevron pointsTo="right" />

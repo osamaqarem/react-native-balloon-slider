@@ -1,10 +1,7 @@
 import React from "react"
 import { View, StyleSheet } from "react-native"
 
-interface ChevronProps {
-  pointsTo?: "left" | "right"
-}
-const Chevron = ({ pointsTo = "left" }: ChevronProps) => {
+const Chevron = ({ pointsTo = "left" }) => {
   const pointsLeft = pointsTo === "left"
 
   return (
@@ -14,7 +11,8 @@ const Chevron = ({ pointsTo = "left" }: ChevronProps) => {
         {
           left: pointsLeft ? -8 : 8,
         },
-      ]}>
+      ]}
+    >
       <View
         style={[
           styles.upperDash,
@@ -27,7 +25,8 @@ const Chevron = ({ pointsTo = "left" }: ChevronProps) => {
         style={{
           alignSelf: "center",
           position: "absolute",
-        }}>
+        }}
+      >
         <View
           style={[
             styles.lowerDash,

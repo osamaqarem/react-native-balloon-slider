@@ -1,22 +1,33 @@
 {
-  "name": "react-native-balloon-slider-example",
-  "displayName": "BalloonSlider Example",
   "expo": {
-    "name": "react-native-balloon-slider-example",
-    "slug": "react-native-balloon-slider-example",
+    "name": "balloon-slider-example",
     "description": "Example app for react-native-balloon-slider",
-    "privacy": "public",
+    "slug": "balloon",
     "version": "1.0.0",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
     ],
     "ios": {
       "supportsTablet": true
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ]
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "sdkVersion": "38.0.0",
+    "platforms": [
+      "android",
+      "ios"
+    ],
+    "githubUrl": "https://github.com/osamaq/react-native-balloon-slider"
   }
 }
