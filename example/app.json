@@ -1,0 +1,22 @@
+{
+  "name": "react-native-balloon-slider-example",
+  "displayName": "BalloonSlider Example",
+  "expo": {
+    "name": "react-native-balloon-slider-example",
+    "slug": "react-native-balloon-slider-example",
+    "description": "Example app for react-native-balloon-slider",
+    "privacy": "public",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
