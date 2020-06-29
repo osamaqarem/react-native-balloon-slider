@@ -10625,10 +10625,10 @@ react-is@^16.12.0, react-is@^16.8.1, react-is@^16.8.4:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-native-balloon-slider@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/react-native-balloon-slider/-/react-native-balloon-slider-0.1.1.tgz#57b803978be98cedfca1c730f8118884bf16373f"
-  integrity sha512-pmEm7xXqTHkRJxLrEo/unebO+UWjlACc3vN84BcDJmoyDpUr2+P5Vc/cGqBsDz52JR9ItnK8aJyHzrPYSlyPBQ==
+react-native-balloon-slider@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/react-native-balloon-slider/-/react-native-balloon-slider-0.1.2.tgz#3272fdfe649c0ed49cddcb7ddc2b95c89614a52d"
+  integrity sha512-4rkJfYGY4xUNH/JZDGnGHfyrLZzGx4YZMoEqp5+GDi9dBAC0xMtDn4gHlE2NTc54No9w9cUfXQjFgIEi3m5ucA==
   dependencies:
     react-native-redash "^14.1.1"
 
