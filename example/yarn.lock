@@ -10625,10 +10625,10 @@ react-is@^16.12.0, react-is@^16.8.1, react-is@^16.8.4:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-native-balloon-slider@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/react-native-balloon-slider/-/react-native-balloon-slider-0.1.0.tgz#1ff669d783ff4e64058ae6b1044d78069fb6bedc"
-  integrity sha512-HEDTXImz1nVCgVz+ETej7lf/vJaHxnfslnew6IhZKniwm7Qdy9Fkygr8D1xViW6iidNCbREHTrWiSfmn/VX3FA==
+react-native-balloon-slider@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/react-native-balloon-slider/-/react-native-balloon-slider-0.1.1.tgz#57b803978be98cedfca1c730f8118884bf16373f"
+  integrity sha512-pmEm7xXqTHkRJxLrEo/unebO+UWjlACc3vN84BcDJmoyDpUr2+P5Vc/cGqBsDz52JR9ItnK8aJyHzrPYSlyPBQ==
   dependencies:
     react-native-redash "^14.1.1"
 
@@ -10662,11 +10662,6 @@ react-native-safe-area-context@3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/react-native-safe-area-context/-/react-native-safe-area-context-3.0.2.tgz#95dd7e56bc89bcc4f3f7bb5fada30c98420328b2"
   integrity sha512-x3yVMsxwe9GyvIkv0Q5jy2CWYN7VO0/CJTFGG5kSiMo8FFTQJbWtuWGANFqxDzEH5NEV7/SfK+qTgAh931KyUw==
-
-react-native-safe-area-context@^3.0.2:
-  version "3.0.7"
-  resolved "https://registry.yarnpkg.com/react-native-safe-area-context/-/react-native-safe-area-context-3.0.7.tgz#0f53de7a30d626d82936000f3f6db374ecc4b800"
-  integrity sha512-dqhRTlIFe5+P1yxitj0C9XVUxLqOmjomeqzUSSY8sNOWVjtIhEY/fl4ZKYpAVnktd8dt3zl13XmJTmRmy3d0uA==
 
 react-native-unimodules@~0.10.1:
   version "0.10.1"

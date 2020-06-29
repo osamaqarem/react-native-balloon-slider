@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   slider: {
+    width: 300,
     marginTop: 100,
     justifyContent: "center",
     alignItems: "center",
