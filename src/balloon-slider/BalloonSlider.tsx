@@ -1,4 +1,4 @@
-import React, { useMemo, useRef, useState } from "react"
+import React, { useMemo, useRef, useState, useImperativeHandle } from "react"
 import { StyleSheet, View } from "react-native"
 import {
   LongPressGestureHandler,
@@ -17,6 +17,9 @@ import Animated, {
   set,
   sub,
   useCode,
+  diff,
+  eq,
+  call,
 } from "react-native-reanimated"
 import {
   clamp,
@@ -31,17 +34,17 @@ import {
   withOuterThumbScaleTiming,
   withThumbScaleTiming,
 } from "./timings"
-import type { BalloonSliderProps } from "./types"
+import type { BalloonSlider } from "./types"
 
-const BalloonSlider = ({
-  min = 0,
-  max = 100,
-  tintColor = "#5d36bb",
-}: BalloonSliderProps) => {
+const BalloonSlider: BalloonSlider = (
+  { min = 0, max = 100, tintColor = "#5d36bb" },
+  ref,
+) => {
   // need to use state to get picker width on mount
   // TODO: try
   // Animated.event([]) with useCode
   const [sliderWidth, setSliderWidth] = useState(0)
+  const textValue = useRef("")
   const dragState = useValue(State.UNDETERMINED)
   const dragX = useValue(0)
   const velocityX = useValue(0)
@@ -108,16 +111,37 @@ const BalloonSlider = ({
     [],
   )
 
-  const balloonText = concat(
-    floor(
-      interpolate(clampedX, {
-        inputRange: [lowerBound, upperBound],
-        outputRange: [min, max],
-        extrapolate: Extrapolate.CLAMP,
-      }),
-    ),
+  const balloonTextNode = floor(
+    interpolate(clampedX, {
+      inputRange: [lowerBound, upperBound],
+      outputRange: [min, max],
+      extrapolate: Extrapolate.CLAMP,
+    }),
+  )
+
+  const balloonTextString = concat(
+    // fix for -0 edge case
+    cond(eq(balloonTextNode, 0), 0, balloonTextNode),
     "",
   )
+
+  // exposing text value to JS
+  useCode(
+    () =>
+      cond(
+        greaterThan(diff(pressState), 0),
+        call([balloonTextString], ([text]) => {
+          textValue.current = text
+        }),
+      ),
+    [balloonTextString, pressState],
+  )
+
+  useImperativeHandle(ref, () => ({
+    getValue: () => {
+      return textValue.current
+    },
+  }))
 
   // No idea why this is needed.
   // The animation breaks if we use clampedX directly in the timing function.
@@ -126,8 +150,8 @@ const BalloonSlider = ({
 
   const balloonX = withBalloonTranslateXTiming(clampedXCopy)
 
-  const diff = sub(clampedXCopy, balloonX)
-  const moving = cond(greaterThan(abs(diff), 0.001), 1, 0)
+  const xDiff = sub(clampedXCopy, balloonX)
+  const moving = cond(greaterThan(abs(xDiff), 0.001), 1, 0)
 
   const thumbScale = useMemo(
     () => withThumbScaleTiming(dragState, velocityX, moving),
@@ -162,8 +186,7 @@ const BalloonSlider = ({
           },
         ]}
       />
-      {/* with respect to translation + scale animations,
-      this container is required to prevent origin of transform related errors (wrong translateX value) */}
+      {/* balloonContainer prevents scale + translateX origin of transform errors */}
       <Animated.View
         pointerEvents="none"
         style={[
@@ -185,7 +208,7 @@ const BalloonSlider = ({
               ],
             },
           ]}>
-          <Balloon text={balloonText} />
+          <Balloon text={balloonTextString} tintColor={tintColor} />
         </Animated.View>
       </Animated.View>
       <LongPressGestureHandler
@@ -246,7 +269,6 @@ const BalloonSlider = ({
     </Animated.View>
   )
 }
-export default BalloonSlider
 
 const styles = StyleSheet.create({
   container: {
@@ -296,3 +318,5 @@ const styles = StyleSheet.create({
     height: 10,
   },
 })
+
+export default BalloonSlider
