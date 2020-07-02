@@ -1,5 +1,5 @@
 import React, { useRef } from "react"
-import { StyleSheet, Text, View } from "react-native"
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native"
 import Chevron from "./Chevron"
 import NextBtn from "./NextBtn"
 import BalloonSlider from "react-native-balloon-slider"
@@ -22,9 +22,9 @@ export default function App() {
       <View style={styles.slider}>
         <BalloonSlider min={0} max={100} ref={balloonSlider} />
       </View>
-      <View style={styles.btn}>
+      <TouchableOpacity style={styles.btn} onPress={getSliderValue}>
         <NextBtn />
-      </View>
+      </TouchableOpacity>
     </View>
   )
 }
