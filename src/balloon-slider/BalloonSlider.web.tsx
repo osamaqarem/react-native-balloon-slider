@@ -192,7 +192,7 @@ const BalloonSlider: BalloonSliderFC = (
 
   const angleActual = angleCopy.current.interpolate({
     inputRange: [-16, 16],
-    outputRange: ["-16deg", "16deg"],
+    outputRange: ["-24deg", "24deg"],
     extrapolate: Extrapolate.CLAMP,
   })
 
