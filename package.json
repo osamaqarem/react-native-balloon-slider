@@ -1,6 +1,6 @@
 {
   "name": "react-native-balloon-slider",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Slider with a floating balloon animation",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
