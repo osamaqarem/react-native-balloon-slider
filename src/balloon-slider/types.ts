@@ -10,7 +10,7 @@ export type BalloonSliderStatic = {
     getValue: () => string
 } | undefined
 
-export type BalloonSlider = (
+export type BalloonSliderFC = (
     props: BalloonSliderProps,
     ref: Ref<BalloonSliderStatic>,
 ) => JSX.Element

@@ -34,9 +34,9 @@ import {
   withOuterThumbScaleTiming,
   withThumbScaleTiming,
 } from "./timings"
-import type { BalloonSlider } from "./types"
+import type { BalloonSliderFC } from "./types"
 
-const BalloonSlider: BalloonSlider = (
+const BalloonSlider: BalloonSliderFC = (
   { min = 0, max = 100, tintColor = "#5d36bb" },
   ref,
 ) => {

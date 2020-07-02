@@ -11,8 +11,7 @@ const Chevron = ({ pointsTo = "left" }) => {
         {
           left: pointsLeft ? -8 : 8,
         },
-      ]}
-    >
+      ]}>
       <View
         style={[
           styles.upperDash,
@@ -25,8 +24,7 @@ const Chevron = ({ pointsTo = "left" }) => {
         style={{
           alignSelf: "center",
           position: "absolute",
-        }}
-      >
+        }}>
         <View
           style={[
             styles.lowerDash,
@@ -50,14 +48,14 @@ const styles = StyleSheet.create({
   upperDash: {
     position: "absolute",
     backgroundColor: "black",
-    height: StyleSheet.hairlineWidth * 6,
+    height: 3,
     width: 12,
     borderRadius: 8,
   },
   lowerDash: {
     top: 6.5,
     backgroundColor: "black",
-    height: StyleSheet.hairlineWidth * 6,
+    height: 3,
     width: 12,
     borderRadius: 8,
   },
