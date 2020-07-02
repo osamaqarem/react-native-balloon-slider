@@ -33,7 +33,6 @@ import {
   useGestureHandler,
   useValue,
   withOffset,
-  bin,
 } from "react-native-redash"
 import Balloon from "./Balloon"
 import {
@@ -43,7 +42,6 @@ import {
   withThumbScaleTiming,
 } from "./timings"
 import type { BalloonSliderFC } from "./types"
-import { useDebug } from "./util"
 
 const BalloonSlider: BalloonSliderFC = (
   { min = 0, max = 100, tintColor = "#5d36bb" },

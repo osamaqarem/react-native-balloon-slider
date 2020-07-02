@@ -1,4 +1,10 @@
-import React, { useMemo, useRef, useState, useImperativeHandle } from "react"
+import React, {
+  useMemo,
+  useRef,
+  useState,
+  useImperativeHandle,
+  forwardRef,
+} from "react"
 import { StyleSheet, View } from "react-native"
 import {
   LongPressGestureHandler,
@@ -319,4 +325,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default BalloonSlider
+export default forwardRef(BalloonSlider)

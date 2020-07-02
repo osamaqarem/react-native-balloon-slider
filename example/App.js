@@ -2,7 +2,7 @@ import React, { useRef } from "react"
 import { StyleSheet, Text, View } from "react-native"
 import Chevron from "./Chevron"
 import NextBtn from "./NextBtn"
-import BalloonSlider from "./src/BalloonSlider"
+import BalloonSlider from "react-native-balloon-slider"
 
 export default function App() {
   const balloonSlider = useRef()
