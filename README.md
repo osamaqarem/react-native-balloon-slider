@@ -1,5 +1,13 @@
 # react-native-balloon-slider
 
+<p align="center" >
+  <img
+    width="300px"
+    src="https://github.com/osamaq/react-native-balloon-slider/raw/master/assets/demo.gif"
+    alt="Demo gif"
+  />
+</p>
+
 Slider with a floating balloon animation. Works on iOS, Android and the web.
 
 > Based on [cuberto/balloon-picker](https://github.com/Cuberto/balloon-picker)
