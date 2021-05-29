@@ -1,5 +1,7 @@
 # react-native-balloon-slider
 
+## (Unmaintained - please fork)
+
 <p align="center" >
   <img
     width="300px"
